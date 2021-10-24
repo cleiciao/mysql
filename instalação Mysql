@@ -1,0 +1,25 @@
+Atualização do SO
+apt update && apt upgrade -y
+
+
+O mysql-server necessita de algumas dependencias
+
+apt install -y gnupg lsb-release
+
+Vamos baixar e instalar o repositório
+
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.19-1_all.deb
+dpkg -i mysql-apt-config_0.8.19-1_all.deb
+apt update
+
+
+Agora iremos instalar o Mysql
+
+apt install -y mysql-server
+
+Para verificarmos se o serviço foi instalado pode executar o seguinte comando.
+mysql --version 
+
+Saida do Comando 
+
+mysql  Ver 15.1 Distrib 10.3.31-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
